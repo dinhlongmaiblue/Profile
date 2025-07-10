@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tài Liệu Cá Nhân</title>
+  <style>
+    body {
+      background-image: url('anh/hinhnen.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .content-box {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+      text-align: center;
+      color: #333;
+    }
+
+    .avatar {
+      width: 150px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin: 20px 0;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      background: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      transition: background 0.3s, color 0.3s, border 0.3s;
+      border: 1px solid transparent;
+    }
+
+    a.button:hover {
+      background: white;
+      color: #007BFF;
+      border: 1px solid #007BFF;
+    }
+
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: white;
+      user-select: none;
+      animation-name: fall;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+.animate-in {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInScale 1s ease-out forwards;
+}
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="content-box animate-in">
+    <h1>Tài Liệu Cá Nhân</h1>
+
+    <img src="anh/mdl.jpg" alt="Mai Đình Long" class="avatar">
+
+    <p>Họ tên: Mai Đình Long</p>
+    <p>Năm sinh: 2008</p>
+    <p>SĐT: 0363877735</p>
+    <p>Ngân hàng: 0363877735 (momo, mbbank)</p>
+    <p>Sở thích: Công nghệ, Lập trình, Game</p>
+    <p>Kỹ năng: Tiếp thu công nghệ nhanh, HTML, CSS chưa học</p>
+
+    <h1>Trang Cá Nhân</h1>
+    <p>Facebook: <a href="https://facebook.com/dinhlongmaiblue" target="_blank">Tại đây</a></p>
+    <p>Zalo: <a href="https://zalo.me/0363877735" target="_blank">Tại Đây</a></p>
+
+    <a href="index.html" class="button">⬅ Quay lại Trang Giới Thiệu</a>
+  </div>
+
+  <script>
+    const snowflakesCount = 30;
+    for (let i = 0; i < snowflakesCount; i++) {
+      const snowflake = document.createElement("div");
+      snowflake.className = "snowflake";
+      snowflake.style.left = Math.random() * 100 + "vw";
+      snowflake.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      snowflake.style.opacity = Math.random();
+      snowflake.style.fontSize = (Math.random() * 10 + 10) + "px";
+      snowflake.innerText = "❄";
+      document.body.appendChild(snowflake);
+    }
+  </script>
+
+</body>
+</html>
