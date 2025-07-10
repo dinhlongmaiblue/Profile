@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profile MDLBLUE</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     html, body {
       height: 100%;
@@ -24,6 +24,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 20px;
     }
 
     .animate-in {
@@ -40,7 +41,7 @@
     }
 
     .content-box {
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(255, 255, 255, 0.95);
       padding: 30px;
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -130,9 +131,7 @@
       top: -10px;
       color: white;
       user-select: none;
-      animation-name: fall;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
+      animation: fall linear infinite;
     }
 
     @keyframes fall {
@@ -145,14 +144,14 @@
 
 <body>
   <div class="content-box animate-in">
-    <h1>Trang profile</h1>
+    <h1>Trang Profile</h1>
 
     <img src="anh/mdl.jpg" alt="Mai Đình Long" class="avatar">
 
-    <p style="color:#000;">Họ tên : Mai Đình Long (dinhlongmaiblue)</p>
-    <p style="color:#000;">Sinh năm 2008</p>
+    <p style="color:#333;">Họ tên: Mai Đình Long (dinhlongmaiblue)</p>
+    <p style="color:#333;">Sinh năm 2008</p>
 
-    <h1>Tiến Độ Học HTML Của Tôi</h1>
+    <h2>Tiến Độ Học HTML Của Tôi</h2>
 
     <div class="progress-bar">
       <div class="progress">5%</div>
@@ -164,7 +163,7 @@
   </div>
 
   <script>
-    const snowflakesCount = 15; // Giảm số bông tuyết cho mượt
+    const snowflakesCount = 15;
 
     for (let i = 0; i < snowflakesCount; i++) {
       const snowflake = document.createElement("div");
