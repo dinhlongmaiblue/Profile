@@ -3,43 +3,54 @@
 <head>
   <title>Profile MDLBLUE</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
     body {
       background-image: url('anh/hinhnen.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
       display: flex;
       justify-content: center;
-      align-items: center;  
+      align-items: center;
     }
 
-.animate-in {
-  opacity: 0;
-  transform: scale(0.8);
-  animation: fadeInScale 1s ease-out forwards;
-}
+    .animate-in {
+      opacity: 0;
+      transform: scale(0.8);
+      animation: fadeInScale 1s ease-out forwards;
+    }
 
-@keyframes fadeInScale {
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-.content-box {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  max-width: 500px;
-  text-align: center;
-  color: #333;
-}
+    @keyframes fadeInScale {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .content-box {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+      text-align: center;
+      color: #333;
+    }
+
     h1 {
-      margin-top: 50px;
+      margin-top: 20px;
     }
 
     img.avatar {
@@ -49,115 +60,122 @@
       margin-top: 20px;
     }
 
-    .progress {
-  width: 5%;
-  height: 100%;
-  background-color: #007BFF;
-  border-radius: 15px 0 0 15px;
-  text-align: center;
-  color: white;
-  line-height: 25px;
-  font-weight: bold;
-}
     .progress-bar {
-  width: 80%;
-  max-width: 400px;
-  height: 25px;
-  background-color: #ddd;
-  border-radius: 15px;
-  margin: 20px auto;
-  box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
-  overflow: hidden;
-}
+      width: 80%;
+      max-width: 400px;
+      height: 25px;
+      background-color: #ddd;
+      border-radius: 15px;
+      margin: 20px auto;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    .progress {
+      width: 5%;
+      height: 100%;
+      background-color: #007BFF;
+      border-radius: 15px 0 0 15px;
+      text-align: center;
+      color: white;
+      line-height: 25px;
+      font-weight: bold;
+    }
 
     a.button {
-  display: inline-block;
-  margin-top: 20px;
-  text-decoration: none;
-  background: #007BFF;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
-  transition: background 0.3s, color 0.3s;
-}
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      background: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      transition: background 0.3s, color 0.3s, border 0.3s;
+    }
 
-a.button:hover {
-  background: white;
-  color: #007BFF;
-  border: 1px solid #007BFF;
-}
-@media (max-width: 600px) {
-  .content-box {
-    padding: 15px;
-    max-width: 90%;
-  }
+    a.button:hover {
+      background: white;
+      color: #007BFF;
+      border: 1px solid #007BFF;
+    }
 
-  img.avatar {
-    width: 120px;
-  }
-  h1 {
-    font-size: 20px;
-  }
-  .progress-bar {
-    width: 100%;
-  }
-  a.button {
-    padding: 8px 15px;
-    font-size: 14px;
-  }
-}
+    @media (max-width: 600px) {
+      .content-box {
+        padding: 15px;
+        max-width: 90%;
+      }
+
+      img.avatar {
+        width: 120px;
+      }
+
+      h1 {
+        font-size: 20px;
+        margin-top: 10px;
+      }
+
+      .progress-bar {
+        width: 100%;
+      }
+
+      a.button {
+        padding: 8px 15px;
+        font-size: 14px;
+      }
+    }
+
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: white;
+      user-select: none;
+      animation-name: fall;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
   </style>
 </head>
 
 <body>
- <div class="content-box animate-in">
-  <h1>Trang profile</h1>
+  <div class="content-box animate-in">
+    <h1>Trang profile</h1>
 
-  <img src="anh/mdl.jpg" alt="Mai Đình Long" class="avatar">
+    <img src="anh/mdl.jpg" alt="Mai Đình Long" class="avatar">
 
-<p style="color:#000;">Họ tên : Mai Đình Long (dinhlongmaiblue)</p>
-<p style="color:#000;">Sinh năm 2008</p>
-  <h1>Tiến Độ Học HTML Của Tôi</h1>
+    <p style="color:#000;">Họ tên : Mai Đình Long (dinhlongmaiblue)</p>
+    <p style="color:#000;">Sinh năm 2008</p>
 
-  <div class="progress-bar">
-    <div class="progress">5%</div>
+    <h1>Tiến Độ Học HTML Của Tôi</h1>
+
+    <div class="progress-bar">
+      <div class="progress">5%</div>
+    </div>
+
+    <p>Đã hoàn thành 5% lộ trình học lập trình web!</p>
+
+    <a href="thongtin.html" class="button">📄 Xem Tài Liệu Cá Nhân</a>
   </div>
 
-  <p>Đã hoàn thành 5% lộ trình học lập trình web!</p>
-<a href="thongtin.html" class="button">📄 Xem Tài Liệu Cá Nhân</a>
+  <script>
+    const snowflakesCount = 15; // Giảm số bông tuyết cho mượt
 
-<script>
-  const snowflakesCount = 30;
-
-  for (let i = 0; i < snowflakesCount; i++) {
-    const snowflake = document.createElement("div");
-    snowflake.className = "snowflake";
-    snowflake.style.left = Math.random() * 100 + "vw";
-    snowflake.style.animationDuration = (Math.random() * 3 + 2) + "s";
-    snowflake.style.opacity = Math.random();
-    snowflake.style.fontSize = (Math.random() * 10 + 10) + "px";
-    snowflake.innerText = "❄";
-    document.body.appendChild(snowflake);
-  }
-</script>
-
-<style>
-  .snowflake {
-    position: fixed;
-    top: -10px;
-    color: white;
-    user-select: none;
-    animation-name: fall;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-
-  @keyframes fall {
-    to {
-      transform: translateY(100vh);
+    for (let i = 0; i < snowflakesCount; i++) {
+      const snowflake = document.createElement("div");
+      snowflake.className = "snowflake";
+      snowflake.style.left = Math.random() * 100 + "vw";
+      snowflake.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      snowflake.style.opacity = Math.random();
+      snowflake.style.fontSize = (Math.random() * 10 + 10) + "px";
+      snowflake.innerText = "❄";
+      document.body.appendChild(snowflake);
     }
-  }
-</style>
-
+  </script>
 </body>
 </html>
